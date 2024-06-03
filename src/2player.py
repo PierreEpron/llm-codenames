@@ -105,7 +105,7 @@ with torch.no_grad():
         input_ids = tokenizer.apply_chat_template(current_turns, return_tensors='pt')
         answer = clm_model.generate(input_ids, generation_config)[0, input_ids.shape[1]:]
 
-        for turns, out in player_turns:
+        for turns in player_turns:
             turns.append({
                 'role':'user' if turns == current_turns else 'assistant',
                 'content': tokenizer.decode(answer[3:-1]),
