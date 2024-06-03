@@ -102,7 +102,7 @@ with torch.no_grad():
 
         current_turns = player_turns[step % 2]
 
-        input_ids = tokenizer.apply_chat_template(current_turns, return_tensors='pt')
+        input_ids = tokenizer.apply_chat_template(current_turns, return_tensors='pt').to(clm_model.device)
         answer = clm_model.generate(input_ids, generation_config)[0, input_ids.shape[1]:]
 
         for turns in player_turns:
