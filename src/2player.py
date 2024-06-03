@@ -92,6 +92,7 @@ player_turns = [spy_turns, agent_turns]
 player_names = ['spy', 'agent']
 
 result_path = get_incremented_path(script_config.result_path)
+result_path.mkdir()
 
 torch.cuda.empty_cache()
 clm_model.eval()
