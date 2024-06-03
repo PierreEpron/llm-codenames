@@ -48,6 +48,7 @@ tokenizer.pad_token_id = tokenizer.eos_token_id
 
 print(tokenizer.eos_token_id)
 print(tokenizer.encode("<|eot_id|>"))
+print([tokenizer.decode(t) for t in tokenizer.encode("<|eot_id|>")])
 
 
 if script_config.load_in_8bit or script_config.load_in_4bit:
