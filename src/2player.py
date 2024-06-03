@@ -46,6 +46,9 @@ tokenizer = AutoTokenizer.from_pretrained(script_config.clm_model_name, padding_
 tokenizer.use_default_system_prompt = False
 tokenizer.pad_token_id = tokenizer.eos_token_id
 
+print(tokenizer.eos_token_id)
+print(tokenizer.encode("<|eot_id|>"))
+
 
 if script_config.load_in_8bit or script_config.load_in_4bit:
     quantization_config = BitsAndBytesConfig(
