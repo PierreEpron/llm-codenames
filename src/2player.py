@@ -112,5 +112,7 @@ with torch.no_grad():
                 'content': tokenizer.decode(answer[3:-1]),
             })
 
+        print(len(player_turns[0]), len(player_turns[1]))
+
         (result_path / f"{player_names[step % 2]}.txt").write_text(tokenizer.decode(tokenizer.apply_chat_template(current_turns)))
         write_jsonl(result_path / f"{player_names[step % 2]}.jsonl", current_turns)
