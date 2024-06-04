@@ -12,7 +12,7 @@ Gameplay:
         The clue must be only one word. You are not allowed to give extra hints. For example, don't say, "This may be a bit of a stretch…" You are playing Codenames. It's always a bit of a stretch.
         If the guesser reveals a:
             Red Word: Correct guess, they can continue guessing up to the given number plus one.
-            Neutral Word: Incorrect guess, end the turn.
+            Neutral Word: Incorrect guess, end the turn. The spy gives a new clue.
             Assassin Word: Immediate loss.
 
     End of Turn: The turn ends either when the agent has made the number of guesses indicated by the clue or when they decide to stop guessing.
