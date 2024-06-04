@@ -8,9 +8,10 @@ Gameplay:
 
     Turn Sequence:
         The spy gives a one-word clue and a number. The clue is related to the words on the grid, and the number indicates how many words are associated with the clue.
-        The agent tries to identify the words based on the clue and answer the word to make it guesses.
         The clue must be only one word. You are not allowed to give extra hints. For example, don't say, "This may be a bit of a stretch…" You are playing Codenames. It's always a bit of a stretch.
-        If the guesser reveals a:
+        The agent tries to identify the words based on the clue and answer the word to make it guesses.
+        The agent must make only one guess at a time and wait for the spy's response before making another guess.
+        If the agent guesses a:
             Red Word: Correct guess, they can continue guessing up to the given number plus one.
             Neutral Word: Incorrect guess, end the turn.
             Assassin Word: Immediate loss.
