@@ -88,8 +88,7 @@ agent_turns = [
   {'role':'system', 'content':agent_system_prompt + "\n\n" + grid.get_str(hide=True)}
 ]
 
-player_turns = [spy_turns, agent_turns]
-player_names = ['spy', 'agent']
+player_turns = [('spy', spy_turns), ('agent', agent_turns)]
 
 result_path = get_incremented_path(script_config.result_path)
 result_path.mkdir()
@@ -101,18 +100,18 @@ with torch.no_grad():
 
     for step in tqdm(list(range(100))):
 
-        current_turns = player_turns[step % 2]
+        current_player, current_turns = player_turns[step % 2]
 
         input_ids = tokenizer.apply_chat_template(current_turns, return_tensors='pt').to(clm_model.device)
         answer = clm_model.generate(input_ids, generation_config)[0, input_ids.shape[1]:]
 
-        for turns in player_turns:
+        for player, turns in player_turns:
             turns.append({
-                'role':'user' if turns == current_turns else 'assistant',
+                'role': 'assistant' if current_player == player else 'user',
                 'content': tokenizer.decode(answer[3:-1]),
             })
-
-        print(len(player_turns[0]), len(player_turns[1]))
-
-        (result_path / f"{player_names[step % 2]}.txt").write_text(tokenizer.decode(tokenizer.apply_chat_template(current_turns)))
-        write_jsonl(result_path / f"{player_names[step % 2]}.jsonl", current_turns)
+            
+            (result_path / f"{player}.txt").write_text(tokenizer.decode(tokenizer.apply_chat_template(turns)))
+            write_jsonl(result_path / f"{player}.jsonl", turns)
+        
+        print(current_player, current_turns[-1])
