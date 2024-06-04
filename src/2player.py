@@ -14,7 +14,7 @@ from tqdm import tqdm
 import numpy as np
 import torch
 
-from src.utils import get_hf_token, get_incremented_path
+from src.utils import get_hf_token, get_incremented_path, write_jsonl
 from src import game as G
 
 torch_dtype = torch.bfloat16
@@ -113,3 +113,4 @@ with torch.no_grad():
             })
 
         (result_path / f"{player_names[step % 2]}.txt").write_text(tokenizer.decode(tokenizer.apply_chat_template(current_turns)))
+        write_jsonl(result_path / f"{player_names[step % 2]}.jsonl", current_turns)
