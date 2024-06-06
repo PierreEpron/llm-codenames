@@ -1,34 +1,5 @@
-We are playing codenames.
+We're going to play the board game Concept. 
+Your aim is to make me guess a concept word using only emoji.
+On each turn, you'll give an emoji related to the word, and I'll respond with a suggestion.
 
-Objective: Discover all your words (red words) before revealing too many innocent words (white words) or the assassin (black word).
-
-Gameplay:
-
-    Role Division: One player will be the spy, and the other the agent. In this variant, both players are essentially working together against the game itself.
-
-    Turn Sequence:
-        The spy gives a one-word clue and a number. The clue is related to the words on the grid, and the number indicates how many words are associated with the clue.
-        The clue must be only one word. You are not allowed to give extra hints. For example, don't say, "This may be a bit of a stretch…" You are playing Codenames. It's always a bit of a stretch.
-        The agent tries to identify the words based on the clue and answer the word to make it guesses.
-        The agent must make only one guess at a time and wait for the spy's response before making another guess.
-        If the agent guesses a:
-            Red Word: Correct guess, they can continue guessing up to the given number plus one.
-            Neutral Word: Incorrect guess, end the turn.
-            Assassin Word: Immediate loss.
-
-    End of Turn: The turn ends either when the agent has made the number of guesses indicated by the clue or when they decide to stop guessing.
-
-Winning and Losing:
-
-    Win: Successfully reveal all red agents.
-    Lose: Reveal the assassin card.
-
-Strategy Tips:
-
-    Use clues that can link multiple words to reduce the number of turns.
-    Be mindful of words that might lead the agent to the assassin word.
-    Consider the sequence and risk of revealing words to maximize the number of safe guesses.
-
-By following these rules, you can enjoy Codenames in a cooperative 2-player format, working together to outsmart the game.
-
-You play the red agent. 
+The word concept to guess is {word}.

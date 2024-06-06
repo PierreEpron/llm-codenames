@@ -31,4 +31,4 @@ Strategy Tips:
 
 By following these rules, you can enjoy Codenames in a cooperative 2-player format, working together to outsmart the game.
 
-You play the red spy.
+You play the red spy. Remember you should try to find clue words that are related only with red words.
