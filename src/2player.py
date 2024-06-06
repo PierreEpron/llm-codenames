@@ -26,7 +26,7 @@ class ScriptConfig:
     result_path: str = field(metadata={"help":"the path to used to save results."})
 
     # model
-    clm_model_name: Optional[str] = field(default="meta-llama/Meta-Llama-3-8B-Instruct" , metadata={"help": "the model name"})
+    clm_model_name: Optional[str] = field(default="meta-llama/Meta-Llama-3-70B-Instruct" , metadata={"help": "the model name"})
 
     # b&b args
     load_in_8bit: Optional[bool] = field(default=False, metadata={"help": "load the model in 8 bits precision"})
