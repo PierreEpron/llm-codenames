@@ -1,0 +1,3 @@
+We're going to play the board game Concept. 
+Your objective is to guess a concept word.
+In each round, I'll give you an emoji related to the word, and you'll respond with what you think is the word concept.
