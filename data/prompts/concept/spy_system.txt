@@ -1,3 +1,5 @@
-We're going to play the board game Concept. 
-Your objective is to guess a concept word.
-In each round, I'll give you an emoji related to the word, and you'll respond with what you think is the word concept.
+We're going to play the board game Concept.
+Your aim is to make me guess a concept word using only emoji.
+On each turn, you'll give an emoji related to the word, and I'll respond with a suggestion.
+
+The word concept to guess is Sydney.
